@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0615.1857                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Waterfall Chart Assignment2)' inline='true' name='excel-direct.42547.548170868053' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\seema_acharya\Desktop\Visual analytics with Tableau\Content\Chapters\Source Code\Waterfall Chart Assignement 2.twb Files\Data/twbx/Waterfall Chart Assignment2.xlsx' password='' server='' validate='no'>
+        <relation name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='HeadCount' ordinal='0' />
+            <column datatype='integer' name='HeadCountNumber' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>HeadCount</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[HeadCount]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>HeadCount</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HeadCountNumber</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HeadCountNumber]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>HeadCountNumber</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='- Head Count Number' datatype='integer' name='[Calculation_2030626132140698]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='-[HeadCountNumber]' />
+      </column>
+      <column caption='Head Count Number' datatype='integer' name='[HeadCountNumber]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Head Count' datatype='string' name='[HeadCount]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[HeadCount]' derivation='None' name='[none:HeadCount:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <sort class='manual' column='[none:HeadCount:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Headcount at the beginning of the year&quot;</bucket>
+            <bucket>&quot;New Hires&quot;</bucket>
+            <bucket>&quot;Transfer-ins&quot;</bucket>
+            <bucket>&quot;Transfer-outs&quot;</bucket>
+            <bucket>&quot;Exits&quot;</bucket>
+          </dictionary>
+        </sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Waterfall Chart Assignment2)' name='excel-direct.42547.548170868053' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42547.548170868053'>
+            <column caption='- Head Count Number' datatype='integer' name='[Calculation_2030626132140698]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='-[HeadCountNumber]' />
+            </column>
+            <column caption='Head Count Number' datatype='integer' name='[HeadCountNumber]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Head Count' datatype='string' name='[HeadCount]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[HeadCountNumber]' derivation='Sum' name='[cum:sum:HeadCountNumber:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[HeadCount]' derivation='None' name='[none:HeadCount:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2030626132140698]' derivation='Sum' name='[sum:Calculation_2030626132140698:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HeadCountNumber]' derivation='Sum' name='[sum:HeadCountNumber:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42547.548170868053].[sum:HeadCountNumber:qk]' num-steps='2' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[excel-direct.42547.548170868053].[sum:HeadCountNumber:qk]' />
+              <size column='[excel-direct.42547.548170868053].[sum:Calculation_2030626132140698:qk]' />
+              <text column='[excel-direct.42547.548170868053].[sum:HeadCountNumber:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42547.548170868053].[cum:sum:HeadCountNumber:qk]</rows>
+        <cols total='true'>[excel-direct.42547.548170868053].[none:HeadCount:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[excel-direct.42547.548170868053].[sum:HeadCountNumber:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42547.548170868053].[none:HeadCount:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

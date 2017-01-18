@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0615.1857                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Stacked Bar)' inline='true' name='excel-direct.42598.993932337966' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\seema_acharya\Desktop\Visual analytics with Tableau\Content\Chapters\Source Code\Chapter 8\Stacked Bar\StackedBar.twb Files\Data/Desktop/Stacked Bar.xlsx' password='' server='' validate='no'>
+        <relation name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Survey Questions' ordinal='0' />
+            <column datatype='integer' name='Strongly Agree' ordinal='1' />
+            <column datatype='integer' name='Agree' ordinal='2' />
+            <column datatype='integer' name='Neutral' ordinal='3' />
+            <column datatype='integer' name='Disagree' ordinal='4' />
+            <column datatype='integer' name='Strongly Disagree' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Survey Questions</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Survey Questions]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Survey Questions</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Strongly Agree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Strongly Agree]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Strongly Agree</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Agree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Agree]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Agree</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neutral</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Neutral]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Neutral</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Disagree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Disagree]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Disagree</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Strongly Disagree</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Strongly Disagree]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Strongly Disagree</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Agree]' role='measure' type='quantitative'>
+      </column>
+      <column caption='NeutralNegative' datatype='real' name='[Calculation_3390816235605482]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='-([Neutral]/2)' />
+      </column>
+      <column caption='NeutralPositive' datatype='real' name='[Calculation_5320816235537389]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Neutral]/2' />
+      </column>
+      <column datatype='integer' name='[Disagree]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Strongly Agree]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Strongly Disagree]' role='measure' type='quantitative'>
+      </column>
+      <column-instance column='[Agree]' derivation='Sum' name='[sum:Agree:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3390816235605482]' derivation='Sum' name='[sum:Calculation_3390816235605482:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_5320816235537389]' derivation='Sum' name='[sum:Calculation_5320816235537389:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Disagree]' derivation='Sum' name='[sum:Disagree:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Strongly Agree]' derivation='Sum' name='[sum:Strongly Agree:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Strongly Disagree]' derivation='Sum' name='[sum:Strongly Disagree:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Agree:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Strongly Agree:qk]&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Calculation_3390816235605482:qk]&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Calculation_5320816235537389:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Strongly Disagree:qk]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Disagree:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Stacked Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Stacked Bar)' name='excel-direct.42598.993932337966' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42598.993932337966'>
+            <column datatype='integer' name='[Agree]' role='measure' type='quantitative'>
+            </column>
+            <column caption='NeutralNegative' datatype='real' name='[Calculation_3390816235605482]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='-([Neutral]/2)' />
+            </column>
+            <column caption='NeutralPositive' datatype='real' name='[Calculation_5320816235537389]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Neutral]/2' />
+            </column>
+            <column datatype='integer' name='[Disagree]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Strongly Agree]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Strongly Disagree]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='string' name='[Survey Questions]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[Survey Questions]' derivation='None' name='[none:Survey Questions:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Agree]' derivation='Sum' name='[sum:Agree:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3390816235605482]' derivation='Sum' name='[sum:Calculation_3390816235605482:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5320816235537389]' derivation='Sum' name='[sum:Calculation_5320816235537389:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Disagree]' derivation='Sum' name='[sum:Disagree:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Strongly Agree]' derivation='Sum' name='[sum:Strongly Agree:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Strongly Disagree]' derivation='Sum' name='[sum:Strongly Disagree:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42598.993932337966].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Agree:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Disagree:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Calculation_3390816235605482:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Calculation_5320816235537389:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Strongly Agree:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42598.993932337966].[sum:Strongly Disagree:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[excel-direct.42598.993932337966].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Strongly Disagree:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Disagree:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Agree:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42598.993932337966].[sum:Strongly Agree:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[excel-direct.42598.993932337966].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='3' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[excel-direct.42598.993932337966].[:Measure Names]' />
+              <text column='[excel-direct.42598.993932337966].[:Measure Names]' />
+            </encodings>
+            <reference-line axis-column='[excel-direct.42598.993932337966].[Multiple Values]' enable-instant-analytics='true' formula='constant' id='refline0' label='Neutral' label-type='custom' scope='per-table' value='0.0' value-column='[excel-direct.42598.993932337966].[Multiple Values]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.5162431001663208' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42598.993932337966].[none:Survey Questions:nk]</rows>
+        <cols>[excel-direct.42598.993932337966].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Stacked Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[excel-direct.42598.993932337966].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42598.993932337966].[:Measure Names]</field>
+          <field>[excel-direct.42598.993932337966].[none:Survey Questions:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='122' name='Stacked Bar' width='192'>
+      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
+      c1cbpIXra41nt/O9VqUoNHVnovhewr2XtdDGnxu9mODn5bf9pKpJ06a5W5QaxueH/VBGdMi8
+      XV5en35Hdoy6U1v4XuszyzXN8t1CL7/9vz2+wVC/mIo10dqtidaf+1maZNM7JpSO/ku6UFv3
+      hxbO94DCmmgt10S3Y1QZe49VgYmJ8VOcxyFBK3MgfZeAPZIAAGCkcXx+nnt4Wo8lre010aDD
+      ee8L4eVVu+PBOq/QJWCfhxEUfZ/bADMMDSgK5oWnzQMAgI8DzvuKkg/VNUiq5q+PdulSk9hN
+      SeulHktaay7KlKDnaKADOtbL4iXLAACmb9nzyvlTmRs+l5eAZpTyBnC7KWltr4kO4k3SocDV
+      w904+4fcywHvAgDMmDXLgAJrOysoeLQmGprkuwOiT9eyJvN3iHmWz13JK5a0areklSlKSzxd
+      C1b0ti3PYXoAS1q1XdJacOZkLQCUSoL5NE10d+tgNdCz+KeDJa2DDZa0IiJY0jrAsKQVDWsY
+      IEQEA4SIYIAQEQwQIoIBQkSG0t+BUH8ptrHtr0PhCISIYIAQAIwcuTCKk5dvqyi2LTjPifPS
+      GQkAY/TWHZ4Y+IR1tnCZ314O2B/L/HaeC+/gZ3cqnpaBp+m2ua0xHgob2+L5X7bO3mjuOwHA
+      gj3brofl3R7CZX571h/L/NafOyz5VXfxjtRN85uORx+QE3VIa0xMWNSte/mVbQBQebDMyfZm
+      UtmokB3Gk2CU745x9rwJiqwJiUdsivYYvDhSxyt2ckGxbdHFyVELRo7EZX61XdI655O9B2I8
+      LaGxsQn02IN0PbMrCbfiascckk3L/MY05J9sKzYANMcEV92E5n3BlUUAYDm6YqvS4cO6cf+y
+      2OTQuNqp2H3tPbdt5ssmYEnrsyhpVWesi/r5pTdXLZr2NOfxGWq9lyS85jynVHS+7VUfyxOn
+      JvDGPbbFvfzcttbWNgf70aoTd882QmXW3TM1bCcXXOZXy8v8AgCA6aLofUEcaXTYgeJeujzQ
+      Wuuaf9p9+4OFZYdb9d/i/sWdcJnfDtpc5peiKH1LK2PIKVKowdai220GECXYP3Wd8R3f9yul
+      dW1sc0ofWn9Xdb9pftE9S88xs0XlCu6YNwwbU2VYE63dmuir4tUCnzhpPdSrSqvAxNlh0KUH
+      AJi0UFVKtb7oFxtFsa3sO+P7ov9FXwAoapTd0fGNHf9al01LvlJH5LP/fdH2dNTo/Mhb35Rp
+      YQSiXHzCPW6LEnzpZhg13tkvzJMDMNHD01J2aLOw8E0XM4Db3e2n6+Q2gyW71LUm+lq0KMGX
+      z7A5j9REZ2eP6qEm+kCiOHx5UqOGxR47FurYnTXRJxJT1vjmcR261kSXfpkWxpdQDzpITQz1
+      K922fwU/icXmdKmJlkqCvSvCY8w6d4wIurtrb8RSCcM2c2ivie71V72pC9d4qeITfOnmUeO5
+      qzd4/oVSyoFQ2RAjvB7z+LMNEbMUEQAAYJPR8Vxry8HAGwcDO7cZYhWJTO2pmFVJ6sXb4t97
+      0kfRcvP4tr01/Mj3pwzqmyEGpCKxHy9lDKVrYVgTPQgNsRHo+TPURyC8FoaIDKWvMNRfbBX9
+      9vcoHIEQkR7nQAqF4hl3BQ1FOIkejvpx5o5fYYgIBggRwQAhIhggRAQn0YgIjkCICAYIEcEA
+      ISIYoGFHnRkuaL83BZrk+1Z70zRNe/ttzOytdL1nGKBhRp0Zn36j/a4rqDl75ISZzz6JeI83
+      53J6dwukPxkGaFhRZybmvb7kbw8elVxTWtlZ6wNlYG9npan7o6nXfbuHARo+GFVGYp7TykVW
+      HR86o9F0ebm6+k4fDooBGi4YVWbyRaeVi3pcL5/q4Z6k3mFB2XNNJqJjsgEAuCGxljlXrpQG
+      88XtrwSGQOxKI+Mu91+am/X0fwj0BgP0XHMJkEgCOh9IeAAAIBPREsvYGJ4FU+hQczD/Ns98
+      tFKptrI270sLGKBhjJq+YOnRTYH8A5pR498M+KhP9zzitTBEBCfRiAgGCBHBACEiGCBEBAOE
+      iGCAEBEMECKCAUJEMECICAYIEcEAISIYIEQEA4SIYIAQEQwQIoIBQkT+DySsXa3z+yq4AAAA
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

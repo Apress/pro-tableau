@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0615.1857                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Most Common Birthdays)' inline='true' name='excel-direct.42551.974047164353' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\seema_acharya\Desktop\Visual analytics with Tableau\Content\twbx\Most Common Birthdays.xls' password='' server='' validate='no'>
+        <relation name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='integer' name='Rank' ordinal='0' />
+            <column datatype='integer' name='Month' ordinal='1' />
+            <column datatype='integer' name='Day' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='MonthNames' datatype='string' name='[Calculation_1230630232301288]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Month]= 1 then &quot;Jan&quot;&#13;&#10;ELSEIF [Month]= 2 then &quot;Feb&quot;&#13;&#10;ELSEif [Month]= 3 then &quot;Mar&quot;&#13;&#10;ELSEIF [Month]= 4 then &quot;Apr&quot;&#13;&#10;ELSEIF [Month]= 5 then &quot;May&quot;&#13;&#10;ELSEIF [Month]= 6 then &quot;Jun&quot;&#13;&#10;ELSEIF [Month]= 7 then &quot;Jul&quot;&#13;&#10;ELSEIF [Month]= 8 then &quot;Aug&quot;&#13;&#10;ELSEIF [Month]= 9 then &quot;Sep&quot;&#13;&#10;ELSEIF [Month]= 10 then &quot;Oct&quot;&#13;&#10;ELSEIF [Month]= 11 then &quot;Nov&quot;&#13;&#10;ELSEIF [Month]= 12 then &quot;Dec&quot;&#13;&#10;END' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Day]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Most Common Birthdays)' name='excel-direct.42551.974047164353' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42551.974047164353'>
+            <column caption='MonthNames' datatype='string' name='[Calculation_1230630232301288]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Month]= 1 then &quot;Jan&quot;&#13;&#10;ELSEIF [Month]= 2 then &quot;Feb&quot;&#13;&#10;ELSEif [Month]= 3 then &quot;Mar&quot;&#13;&#10;ELSEIF [Month]= 4 then &quot;Apr&quot;&#13;&#10;ELSEIF [Month]= 5 then &quot;May&quot;&#13;&#10;ELSEIF [Month]= 6 then &quot;Jun&quot;&#13;&#10;ELSEIF [Month]= 7 then &quot;Jul&quot;&#13;&#10;ELSEIF [Month]= 8 then &quot;Aug&quot;&#13;&#10;ELSEIF [Month]= 9 then &quot;Sep&quot;&#13;&#10;ELSEIF [Month]= 10 then &quot;Oct&quot;&#13;&#10;ELSEIF [Month]= 11 then &quot;Nov&quot;&#13;&#10;ELSEIF [Month]= 12 then &quot;Dec&quot;&#13;&#10;END' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Day]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='integer' name='[Rank]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Calculation_1230630232301288]' derivation='None' name='[none:Calculation_1230630232301288:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Day]' derivation='None' name='[none:Day:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Rank]' derivation='Sum' name='[sum:Rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42551.974047164353].[sum:Rank:qk]' palette='tableau-orange' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[excel-direct.42551.974047164353].[sum:Rank:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42551.974047164353].[none:Day:ok]</rows>
+        <cols>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontsize='10'>MonthNames: </run>
+              <run bold='true' fontsize='10'>&lt;</run>
+              <run bold='true' fontsize='10'>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</run>
+              <run bold='true' fontsize='10'>&gt;</run>
+              <run bold='true' fontsize='10'>&#10;Day: </run>
+              <run bold='true' fontsize='10'>&lt;</run>
+              <run bold='true' fontsize='10'>[excel-direct.42551.974047164353].[none:Day:ok]</run>
+              <run bold='true' fontsize='10'>&gt;</run>
+              <run bold='true' fontsize='10'>&#10;Rank: </run>
+              <run bold='true' fontsize='10'>&lt;</run>
+              <run bold='true' fontsize='10'>[excel-direct.42551.974047164353].[sum:Rank:qk]</run>
+              <run bold='true' fontsize='10'>&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[excel-direct.42551.974047164353].[none:Day:ok]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</field>
+                      <field>[excel-direct.42551.974047164353].[none:Day:ok]</field>
+                      <field>[excel-direct.42551.974047164353].[sum:Rank:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Sep&quot;</value>
+                    <value>16</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[excel-direct.42551.974047164353].[sum:Rank:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</field>
+          <field>[excel-direct.42551.974047164353].[none:Day:ok]</field>
+          <field>[excel-direct.42551.974047164353].[none:Day:qk]</field>
+        </color-one-way>
+      </highlight>
+      <selection-collection>
+        <tuple-selection>
+          <tuple-reference>
+            <tuple-descriptor>
+              <pane-descriptor>
+                <x-fields>
+                  <field>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</field>
+                </x-fields>
+                <y-fields>
+                  <field>[excel-direct.42551.974047164353].[none:Day:ok]</field>
+                </y-fields>
+              </pane-descriptor>
+              <columns>
+                <field>[excel-direct.42551.974047164353].[none:Calculation_1230630232301288:nk]</field>
+                <field>[excel-direct.42551.974047164353].[none:Day:ok]</field>
+                <field>[excel-direct.42551.974047164353].[sum:Rank:qk]</field>
+              </columns>
+            </tuple-descriptor>
+            <tuple>
+              <value>&quot;Sep&quot;</value>
+              <value>16</value>
+              <value>1</value>
+            </tuple>
+          </tuple-reference>
+        </tuple-selection>
+      </selection-collection>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

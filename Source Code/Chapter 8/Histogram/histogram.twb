@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0615.1857                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='2014_Olympics (2014_Olympics)' inline='true' name='excel-direct.42537.565203564816' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:\data\2014_Olympics.xlsx' password='' server='' validate='no'>
+        <relation name='&apos;2014_Olympics$&apos;' table='[&apos;2014_Olympics$&apos;]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Country' ordinal='0' />
+            <column datatype='string' name='Athlete' ordinal='1' />
+            <column datatype='string' name='Sex' ordinal='2' />
+            <column datatype='integer' name='Age' ordinal='3' />
+            <column datatype='string' name='Sport' ordinal='4' />
+            <column datatype='integer' name='Gold' ordinal='5' />
+            <column datatype='integer' name='Silver' ordinal='6' />
+            <column datatype='integer' name='Bronze' ordinal='7' />
+            <column datatype='integer' name='Total' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Athlete</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Athlete]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Athlete</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sport</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sport]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Sport</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gold</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gold]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Gold</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Silver</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Silver]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Silver</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bronze</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bronze]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Bronze</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[&apos;2014_Olympics$&apos;]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age Group' datatype='string' name='[Calculation_6590616133419169]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if &#13;&#10;([Age] &lt; 25) then &apos;Less than 25&apos;&#13;&#10;elseif&#13;&#10;([Age] &lt;=35) then &quot;25 - 35&quot;&#13;&#10;ELSE&#13;&#10;&quot;&gt;35&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2014_Olympics (2014_Olympics)' name='excel-direct.42537.565203564816' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42537.565203564816'>
+            <column caption='Age Group' datatype='string' name='[Calculation_6590616133419169]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if &#13;&#10;([Age] &lt; 25) then &apos;Less than 25&apos;&#13;&#10;elseif&#13;&#10;([Age] &lt;=35) then &quot;25 - 35&quot;&#13;&#10;ELSE&#13;&#10;&quot;&gt;35&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_6590616133419169]' derivation='None' name='[none:Calculation_6590616133419169:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='manual' column='[excel-direct.42537.565203564816].[none:Calculation_6590616133419169:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Less than 25&quot;</bucket>
+              <bucket>&quot;25 - 35&quot;</bucket>
+              <bucket>&quot;&gt;35&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[excel-direct.42537.565203564816].[none:Calculation_6590616133419169:nk]' value='108' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42537.565203564816].[sum:Number of Records:qk]</rows>
+        <cols>[excel-direct.42537.565203564816].[none:Calculation_6590616133419169:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42537.565203564816].[none:Calculation_6590616133419169:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      gy+IowAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
