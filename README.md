@@ -1,6 +1,6 @@
 #Apress Source Code
 
-This repository accompanies [*Pro Tableau*](http://www.apress.com/9781484223512) by Acharya, Seema (Apress, 2017).
+This repository accompanies [*Pro Tableau*](http://www.apress.com/9781484223512) by Seema Acharya and Subhashini Chellappan (Apress, 2017).
 
 ![Cover image](9781484223512.jpg)
 
